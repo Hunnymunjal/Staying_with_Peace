@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> chatbot </title>
+    <style>
+        
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height:100vh;
+    overflow: hidden;
+    position: relative;
+}
+.menu{
+    color: cadetblue;
+    position:absolute;
+    width:400px;
+    height:600px;
+    background-color: cornsilk;
+   
+}
+.box{
+    width: 490px;
+    height: 450px;
+    box-shadow: 5px 5px 20px #000;
+    position: absolute;
+    top: 40%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    
+}
+.top{
+    width: 100%;
+    height: 80px;
+    background: orange;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.box1{
+    width: 400px;
+    height: 500px;
+    box-shadow: 5px 5px 20px #000;
+    position: absolute;
+    top: 40%;
+    left:20%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    overflow: auto;
+    
+}
+.top h1{
+    margin: 0;
+    font-size: 30px;
+    color: White;
+    text-align: center;
+    padding-top: 10px;
+    font-family: sans-serif;
+}
+.mid{
+    width: 100%;
+    height: 400px;
+    /* background:rgb(245, 252, 249); */
+   
+}
+.mid .chat{
+    width: 100%;
+    height: 300%;
+}
+.mid .chat h2{
+    margin: 0;
+    font-size: 30px;
+    color: #000;
+    padding:30px 20px;
+    text-align: center;
+}
+.mid .chat p{
+    margin: 0;
+    height: 300px;
+    font-size: 28px;
+    color:brown;
+    text-align: center;
+    
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    top: 30%;
+    left: 80%;
+}
+.input{
+    height:200%;
+    width: 489px;
+    overflow: hidden;
+    
+}
+.input input{
+    width: 100%;
+    height: 80px;
+    outline: none;
+    border: none;
+    padding-left: 30px;
+    padding-top:0;
+    font-family: monospace;
+    font-size: 25px;
+    /* background:gainsboro; */
+}
+    </style>
+</head>
+<body>
+   
+   
+    
+    <div class="box1">
+        <div style="text-align: center;" class="top1">
+            <h1>NEGATIVE TRAITS</h1>
+        </div>
+        <div class="mid1">
+            <div class="chat1">
+                <h2><ol><li>Weak</li>
+                <li>Careless</li>
+            <li>Fearfull</li>
+            <li>Helpless</li>
+                <li>Self-centered</li>
+            <li>Unconfident</li>
+            <li>Loser</li>
+                <li>Immature</li>
+            <li>Stuborn</li>
+            <li>Rude</li>
+                <li>Unskilled</li>
+            <li>Stupid</li>
+            <li>Unfriendly</li>
+                <li>Quick to anger</li>
+            <li>Disloyal</li>
+            <li>Cowardly</li>
+                <li>procastination</li>
+            <li>Greedy</li>
+            <li>Irresponsible</li>
+                <li>Jealous</li>
+            <li>giveup</li>
+            <li>dishonest</li>
+                <li>Pessimistic</li>
+            <li>lazy</li>
+            <li>disrispectful</li>
+                
+            <li>Lacking Empathy
+            </li>
+            <li>Low emotional intelligence</li>
+            <li>Impatient</li>
+                <li>Being closed-minded</li>
+            <li> Constant complaining</li>
+        </ol></h2>
+            
+                
+            </div>
+        </div>
+            </div>
+
+    <div class="box">
+<div style="text-align: center;" class="top">
+    <h1>SHARE YOUR THOUGHTS</h1>
+</div>
+<div class="mid">
+    <div class="chat">
+        <h2>positive trait &#129047 </h2>
+        <p id="chatLog">Let's Chat</p>
+    </div>
+</div>
+    <div class="input">
+        
+    <input  type="text" id="userBox"onkeydown="if(event.keyCode == 13){ talk() }"placeholder="number of negative trait">
+    </div>
+    </div>
+    
+
+    <script>
+function talk(){
+    var know ={
+        "hi":"Hello",
+        "how are you?":"Great !",
+        "bye":"Have A Nice Day !",
+        "hello":"Hi , Whats Up",
+        "i am weak":"let's face it, life is just more fun when it isn't taken too seriously. And while making fun and being happy certainly isn't all life has to offer, it's an important part, right?",
+        "1" : "let's face it, life is just more fun when it isn't taken too seriously. And while making fun and being strong certainly isn't all life has to offer, it's an important part, right?",
+        "2" : " You have to force yourself to pay attention to the details. It’s also hard to be careless if you actually like what you are doing or actually care about what you are doing. (by definition, not careless) You have to keep your mind activated,",
+        "3" : " Take a deep breath and tackle your fear head-on. You may be surprised to find that it wasn’t as bad as you thought it would be. ",
+        "4" : " Be there for people in their moments of vulnerability,Look out for others' blind sides,Give selfless feedback ",
+        "5" : " You should learn how to be selfless because not only will you help other people but you will also feel better about yourself. When you are selfless, you will increase your confidence and self-esteem while also repelling negative thoughts.",
+        "6" : "Confidence comes from feelings of well-being, acceptance of your body and mind (your self-esteem) and belief in your own ability, skills and experience.",
+        "7" : "Victory tastes very sweet and there are many advantages to winning but the main thing to never give up when you have learnt to never give up you are already a winner then",
+        "8" : "A mature person will take responsibility for his own actions rather than blame others.An mature person is always adding value to himself and those around .Learning and developmental activities form a key part of his daily activities and goals. ",
+        "9" : "Stubborn people are rigidly attached to their beliefs, opinions, ideas, and tastes, Try to help one random person each day, Volunteer your time for a good cause",
+        "10" : "Being a kind human can be beautiful! Meditation is a great way to slow down your day and take stock when you’re not feeling as kind and generous as you could.",
+        "11" : "A skill is the learned ability to perform an action with determined results with good execution often within a given amount of time,so you just need to focus more and learn through each day",
+        "12": "Even the smartest people can be fool, stop refusing to help, stop ignoring your mistakes,stop arguing and being rude",
+        "13" : "A real friendly person actually cares about others and wants to make them feel comfortable. A real friendly person is concerned when others are upset and uplifted when others are happy; a real friendly person doesn't talk to people just to look cooler ",
+        "14" :"Anger is an emotion that can range from mild irritation to intense.So. try to identify your triggers, try to think before speak,try to relax your mind at that time,step away from your triggers",
+        "15": "A loyal person will value honesty above everything else and this is the primary trait.A loyal person will always let you know the truth even if the opinion does not match with yours.A loyal friend will always want the best for you and will never lie make you feel better.",
+        "16":"It’s never too late to become fearless and step out of your comfort zone.So,Acknowledge your fear,Confront it,Get comfortable with being uncomfortable,Make being brave a habit,don’t aim for perfection",
+        "17":"While we waste our time hesitating and postponing, life is slipping away, yur will power and self-displined should be strong, try not to ignore the value of time.",
+        "18": "Greed occurs when the natural human impulse to collect and consume useful resources,focus on what you have, not what you don't have.Realize material blessings will not bring peace in this life or joy in the eternities. 4 Develop charity; be willing to give, share",
+        "19": "Taking responsibilities is a viable choice that enables you to face life’s challenges successfully,words, actions, and behavior that determines whether you are responsible or not.Stop delaying,Stop making excuses,Stop taking time for granted",
+        "20":"Jealousy can lead to feelings of anger, resentment, or sadness.Try to overcome, try to overcome , build your self-esteem",
+        "21" : "  If you’re in the middle of a period of grief or pain that you are losing again and again,stand and try to do more hardwork. If you are going through a prolonged period of difficulty, remind yourself that this, too, shall pass and you will win but you should never give up",
+        "22": "Honesty is the first trait that anyone looks in another person.Try to Be Straightforward ,Change your bad habits, Try to be Be the best version of yourself,Avoid liars",
+        "23" :"Pessimism is disastrous. It ruins hope and possibilities,Focus on the possibilities, not the impossibilities.Try to live with positive people.",
+        "24":"The only way to overcome it is by setting your mind to the task and getting up and completing it. Start right now to develop the self-discipline you need to reach your goals",
+        "25":"Showing other people respect in your daily life is a great way to tell others that you care about them .Disagree respectfully,Apologize when you’re in the wrong,Affirm people’s opinions.",
+        "26":"By showing we care and understand what others are going through, we create a supportive atmosphere that draws people in. Empathy and caring make others feel valued, and that makes customers more inclined to stay loyal and employees more inclined to work hard.",
+        "27": "Low EQ leads to poor communication skills. It damages your credibility and makes others feel less confident in you. When you’re emotionally intelligent, you’re aware of your emotions, as well as the feelings and needs of those around you.",
+        "28" : "Impatience can lead to hasty decisions that lock you into a bad arrangement. Being determined and eager is a good thing; being rash and making snap decisions is not.",
+        "29": " No matter how certain you are, make sure you hear others out. Even if your way ends up being the best, you’ll be a better leader and your business will grow if you’re open to hearing other perspectives and suggestions. Seek to be radically open-minded",
+        "30":"If you spend all your energy grumbling and lamenting, you’re reinforcing a negative mindset in yourself and driving everyone else away. Pay attention to how often you say negative things. If you can’t get through a conversation without complaining, you have a problem.",
+        "32":" you are kind",
+        "33": "you are sincere",
+        "34": "you are determined",
+        "35":"you are humble",
+        "36":"you are friendly",
+        "37":"you are confident",
+        "38":"you can handle everything",
+        "39":"you can handle peer pressure",
+        "40": "you can handle unhealthy competition",
+        "41":"you can follow your routine",
+        "42":"you can achieve everything",
+        "43" : "you are filled with enthusiasm",
+        "44": "you are disciplined person",
+        "45" : "you can make it happy",
+         "46":"you can become patient",
+         "47":"just trust on yourself",
+          "48":"you should love yourself first"
+    
+    };
+    var user = document.getElementById('userBox').value;
+    document.getElementById('chatLog').innerHTML = user + "<br>";
+    if(user in know){
+        document.getElementById('chatLog').innerHTML = know[user] + "<br>";
+    }else{
+        document.getElementById('chatLog').innerHTML = "BE POSITIVE, STAY HAPPY .";
+    }
+    
+}
+    </script>
+    <img src="https://i.pinimg.com/originals/24/a7/9a/24a79a561e11c22ad4ed03299420402e.jpg"width="1550" 
+    height="900"  >
+    
+</body>
+</html>
